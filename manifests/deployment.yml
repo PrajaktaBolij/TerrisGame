@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: prajaktabolijterrisgame 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prajaktabolijterrisgame
+  template:
+    metadata:
+      labels:
+        app: prajaktabolijterrisgame 
+    spec:
+      containers:
+        - name: prajaktabolijterrisgame 
+          image: terriesacr.azurecr.io/prajaktabolijterrisgame
+          ports:
+          - containerPort: 80
